@@ -1,0 +1,21 @@
+:root {
+  --timer-font: 'Overpass Mono', monospace;
+  --text-font: 'Lato', sans-serif;
+
+
+  --bg-main: #191622;
+  --bg-secondary: #13111b;
+  --bg-dark: #0a090e;
+
+  --success-main: #52e480;
+  --success-secondary: #3fb163;
+
+  --action-main: #ff79bc;
+  --action-secondary: #cc6096;
+
+  --info-main: #71d1e1;
+  --info-secondary: #57a1ae;
+
+
+
+}

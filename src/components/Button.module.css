@@ -1,0 +1,33 @@
+.button {
+  background: gold;
+  box-shadow: 0 4px 0 0 orange;
+  color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  border: 0;
+  outline: none;
+
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  font-family: var(--text-font);
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(1.05);
+}
+
+.button:active {
+  box-shadow: 0 1px 0 0 orange;
+  transform: translateY(3px);
+}

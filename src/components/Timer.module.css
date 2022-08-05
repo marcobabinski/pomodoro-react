@@ -1,0 +1,9 @@
+.timer {
+  position: absolute;
+}
+
+.timer p {
+  color: aliceblue;
+  font-family: var(--timer-font);
+  font-size: 3.8rem;
+}

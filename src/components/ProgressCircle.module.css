@@ -1,0 +1,15 @@
+.progressCircle {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+
+  transition: stroke-dashoffset .35s, stroke 2s;
+}
