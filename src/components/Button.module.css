@@ -1,6 +1,4 @@
 .button {
-  background: gold;
-  box-shadow: 0 4px 0 0 orange;
   color: black;
 
   display: flex;
@@ -27,7 +25,42 @@
   filter: brightness(1.05);
 }
 
-.button:active {
+.yellow {
+  background: gold;
+  box-shadow: 0 4px 0 0 orange;
+}
+
+.yellow:active {
   box-shadow: 0 1px 0 0 orange;
+  transform: translateY(3px);
+}
+
+.blue {
+  background: var(--info-main);
+  box-shadow: 0 4px 0 0 var(--info-secondary);
+}
+
+.blue:active {
+  box-shadow: 0 1px 0 0 var(--info-secondary);
+  transform: translateY(3px);
+}
+
+.purple {
+  background: var(--action-main);
+  box-shadow: 0 4px 0 0 var(--action-secondary);
+}
+
+.purple:active {
+  box-shadow: 0 1px 0 0 var(--action-secondary);
+  transform: translateY(3px);
+}
+
+.green {
+  background: var(--success-main);
+  box-shadow: 0 4px 0 0 var(--success-secondary);
+}
+
+.green:active {
+  box-shadow: 0 1px 0 0 var(--success-secondary);
   transform: translateY(3px);
 }

@@ -2,10 +2,11 @@ import React from "react";
 import Button from "./Button";
 
 import { GoGear } from "react-icons/go"
+import { Link } from "react-router-dom";
 
 export default (props) => {
   return (
-    <div
+    <Link to='/config'
       style={{
         position: 'fixed',
         top: '30px',
@@ -15,6 +16,6 @@ export default (props) => {
       <Button>
         <GoGear />
       </Button>
-    </div>
+    </Link>
   )
 }

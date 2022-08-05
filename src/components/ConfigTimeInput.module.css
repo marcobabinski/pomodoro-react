@@ -1,0 +1,23 @@
+.timeSection {
+  display: grid;
+  grid-template-columns: max-content 1fr 100px;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: black;
+}
+
+.timeSection p {
+  color: aliceblue;
+}
+
+.timeSection > input {
+  height: 41px;
+  border-radius: 5px;
+
+  font-size: 1rem;
+
+  padding-inline: 10px;
+}

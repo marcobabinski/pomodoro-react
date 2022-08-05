@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import './App.css';
 
-import ProgressCircle from './components/ProgressCircle';
-import Buttons from './components/Buttons';
-import Quote from './components/Quote';
+import ProgressCircle from '../components/ProgressCircle';
+import Buttons from '../components/Buttons';
+import Quote from '../components/Quote';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { reset, switchStage, togglePause } from './features/pomodoro/pomodoroSlice';
-import ConfigButton from './components/ConfigButton';
+import { reset, switchStage, togglePause } from '../features/pomodoro/pomodoroSlice';
+import ConfigButton from '../components/ConfigButton';
 
 import { SiReact } from 'react-icons/si'
 import { AiOutlineClockCircle } from 'react-icons/ai'

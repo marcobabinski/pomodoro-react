@@ -1,0 +1,31 @@
+.configBox {
+  background: var(--bg-alt);
+  color: aliceblue;
+
+  padding: 30px 20px;
+  border-radius: 10px;
+
+  width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.line {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.line-max {
+  display: grid;
+  align-items: center;
+  grid-template-columns: max-content 1fr;
+
+  gap: 15px;
+}
+
+.mg {
+  margin-block: 20px;
+}

@@ -12,10 +12,13 @@ export default (props) => {
 
   return (
     <div className={styles.buttons}>
-      <Button action={() => dispatch(togglePause())}>
+      <Button 
+        action={() => dispatch(togglePause())}
+        color={ paused ? 'green' : 'purple' }
+      >
         { paused ? <><IoMdPlay/> Start</> : <><IoMdPause/> Pause</> }
       </Button>
-      <Button action={() => dispatch(reset())}><IoMdRefresh/> Reset</Button>
+      <Button action={() => dispatch(reset())} color="blue"><IoMdRefresh/> Reset</Button>
     </div>
   )
 }
