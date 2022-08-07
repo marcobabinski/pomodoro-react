@@ -14,24 +14,35 @@ const audios = [
 ]
 
 export default (props) => {
+  const { localConfig, updateConfig } = props
+  
   return (
     <div>
       <div className="line-max">
         <p>Notification Sound:</p>
         <div style={{ color: 'black' }}>
           <Select 
-            defaultValue={audios[0]}
+            defaultValue={audios[localConfig.notificationSound]}
             options={audios}
+            onChange={(e) => updateConfig("notificationSound", e.value)}
           />
         </div>
       </div>
       <div className="line mg">
         <p>Notification Volume:</p>
-        <ConfigSlider />
+        <ConfigSlider 
+          value={localConfig.notificationVolume}
+          action={updateConfig}
+          prop={"notificationVolume"}
+        />
       </div>
       <div className="line">
         <p>Browser Notification:</p>
-        <ConfigToggle/>
+        <ConfigToggle 
+          active={localConfig.browserNotifications}
+          action={updateConfig}
+          prop={"browserNotification"}
+        />
       </div>
     </div>
   )

@@ -5,8 +5,11 @@ const initialState = {
   paused: true,
   stage: 0,
   config: {
+    timeParams: [10, 20],
+    notificationSound: 1,
+    notificationVolume: 50,
+    browserNotification: false,
     autoSwitch: true,
-    timeParams: [10, 20]
   }
 };
 
@@ -22,7 +25,7 @@ export const pomodoroSlice = createSlice({
     },
     reset: (state) => {
       state.paused = true;
-      state.time = state.config.timeParams[state.stage];
+      state.time = state.config.timeParams[state.stage] * 60;
     } ,
     togglePause: (state) => {
       state.paused = !state.paused;
@@ -30,10 +33,15 @@ export const pomodoroSlice = createSlice({
     switchStage: (state, action) => {
       state.stage = action.payload;
       // state.time = state.config.timeParams[state.stage]
+    },
+    apllyConfig: (state, action) => {
+      state.config = action.payload
     }
   },
 });
 
-export const { countdown, setTime, togglePause, reset, switchStage } = pomodoroSlice.actions;
+export const { countdown, setTime, togglePause, reset, switchStage,
+  apllyConfig,
+} = pomodoroSlice.actions;
 
 export default pomodoroSlice.reducer;

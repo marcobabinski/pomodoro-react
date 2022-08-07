@@ -24,6 +24,10 @@ body {
   background: linear-gradient(to bottom, var(--bg-main), var(--bg-secondary));
 }
 
+a {
+  text-decoration: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

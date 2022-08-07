@@ -2,10 +2,12 @@ import styles from "./ConfigToggle.module.css"
 import React, { useState } from "react";
 
 export default (props) => {
-  const [value, setValue] = useState(props.active || false);
+  const { active, action, prop } = props
+  const [value, setValue] = useState(active || false);
 
   function toggleValue() {
     setValue(!value)
+    action(prop, !value)
   }
 
   return (

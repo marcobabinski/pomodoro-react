@@ -12,7 +12,7 @@ export default (props) => {
 
   const { time, config, stage } = useSelector((state) => state.pomodoro)
 
-  const percent = clamp((config.timeParams[stage] - time) / config.timeParams[stage], 0, 1)
+  const percent = clamp((config.timeParams[stage] - time / 60) / config.timeParams[stage], 0, 1)
   
   return (
     <div className={styles.progressCircle}>
