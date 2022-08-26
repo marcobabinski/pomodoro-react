@@ -1,46 +1,43 @@
-# Getting Started with Create React App and Redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Pomodoro React
 
-## Available Scripts
+A simple project that applies the Pomodoro Technique in a
+flexible and easy-to-use way. The main purpose is
+to train my React, Redux and CSS skills in general.
 
-In the project directory, you can run:
+Um projeto simples que aplica a Técnica de Pomodoro de modo 
+flexível e de fácil entendimento. O intuito principal é 
+treinar minhas habilidades com React, Redux e CSS de maneira 
+geral.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Color Palette
+The color palette is ***completely*** based on 
+[Omni Theme](https://github.com/getomni) by 
+[@Rocketseat](https://github.com/Rocketseat), with some extra colors for highlights and shadows.
 
-### `npm test`
+Main colors:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Color             | Hex                                                |
+| ----------------- | ---------------------------------------------------------------- |
+| Background       | ![#191622](https://via.placeholder.com/10/191622?text=+) #191622 |
+| Success       | ![#52e480](https://via.placeholder.com/10/52e480?text=+) #52E480 |
+| Action       | ![#ff79bc](https://via.placeholder.com/10/ff79bc?text=+) #FF79BC |
+| Info       | ![#71d1e1](https://via.placeholder.com/10/71d1e1?text=+) #71D1E1 |
+| Gold | ![#ffd700](https://via.placeholder.com/10/ffd700?text=+) #FFD700 |
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## To do
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+➖ Local Storage configuration save  
+➖ Play alarm on timer finish  
+➖ Broser Notification  
+✔ Motivational quotes  
+➖ Periodically change quotes  
+➖ More quotes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Known Issues
+- Manual switch never changes mode
+- Navigate back to home on save changes
+- Debug vars on main page
