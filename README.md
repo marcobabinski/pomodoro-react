@@ -21,11 +21,11 @@ Main colors:
 
 | Color             | Hex                                                |
 | ----------------- | ---------------------------------------------------------------- |
-| Background       | ![#191622](https://via.placeholder.com/10/191622?text=+) #191622 |
-| Success       | ![#52e480](https://via.placeholder.com/10/52e480?text=+) #52E480 |
-| Action       | ![#ff79bc](https://via.placeholder.com/10/ff79bc?text=+) #FF79BC |
-| Info       | ![#71d1e1](https://via.placeholder.com/10/71d1e1?text=+) #71D1E1 |
-| Gold | ![#ffd700](https://via.placeholder.com/10/ffd700?text=+) #FFD700 |
+| Background       | ![#191622](https://via.placeholder.com/10/191622/191622.png) `#191622` |
+| Success       | ![#52e480](https://via.placeholder.com/10/52e480/52e480.png) `#52E480` |
+| Action       | ![#ff79bc](https://via.placeholder.com/10/ff79bc/ff79bc.png) `#FF79BC` |
+| Info       | ![#71d1e1](https://via.placeholder.com/10/71d1e1/71d1e1.png) `#71D1E1` |
+| Gold | ![#ffd700](https://via.placeholder.com/10/ffd700/ffd700.png) `#FFD700` |
 
 
 ## To do
