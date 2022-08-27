@@ -17,12 +17,12 @@ export default (props) => {
       return () => clearTimeout(timeout)
     }
 
-    if (time === 0 && config.autoSwitch) {
+    if (time === 0) {
       const timeout = setTimeout(() => {
         let nextStage = stage === 0 ? 1 : 0
         dispatch(switchStage(nextStage))
         dispatch(reset())
-        dispatch(togglePause())
+        if (config.autoSwitch) dispatch(togglePause())
       }, 2000)
     } 
   }, [time, paused])
