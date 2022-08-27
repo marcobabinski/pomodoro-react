@@ -38,6 +38,4 @@ Main colors:
 ➖ More quotes
 
 ## Known Issues
-- Manual switch never changes mode
-- Navigate back to home on save changes
 - Debug vars on main page

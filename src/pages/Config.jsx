@@ -1,5 +1,6 @@
 import './Config.css'
 import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import Select from 'react-select';
 import ConfigTitle from '../components/ConfigTitle';
 import ConfigTimeInput from '../components/ConfigTimeInput';
@@ -13,10 +14,12 @@ import { IoIosSave } from 'react-icons/io'
 
 import { useSelector, useDispatch } from 'react-redux';
 import { apllyConfig } from '../features/pomodoro/pomodoroSlice';
+import BackButton from '../components/BackButton';
 
 export default (props) => {
   const [localConfig, setLocalConfig] = useState(useSelector((state) => state.pomodoro.config))
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   function updateConfig(prop, value) {
     switch(prop) {
@@ -87,8 +90,9 @@ export default (props) => {
         </Link>
         <div
           onClick={() => {
-            dispatch(apllyConfig(localConfig))
-            alert("Alterações salvas com sucesso!")
+            dispatch(apllyConfig(localConfig));
+            alert("Alterações salvas com sucesso!");
+            navigate("/");
           }}
         >
           <Button color="green">
@@ -96,6 +100,8 @@ export default (props) => {
           </Button>
         </div>
       </div>
+
+      <BackButton />
     </div>
   )
 }
