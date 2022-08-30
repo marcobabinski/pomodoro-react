@@ -10,7 +10,7 @@ export default (props) => {
   const radius = size/2 - stroke * 2
   const circumference = radius * 2 * Math.PI
 
-  const { time, config, stage } = useSelector((state) => state.pomodoro)
+  const { time, config, stage, paused } = useSelector((state) => state.pomodoro)
 
   const percent = clamp((config.timeParams[stage] - time / 60) / config.timeParams[stage], 0, 1)
   
@@ -37,7 +37,25 @@ export default (props) => {
             stroke: `${stage == 0 ? 'var(--action-main)' : 'var(--info-main)'}`,
 
             strokeDasharray: `${circumference}`,
-            strokeDashoffset: `${circumference - percent * circumference}`
+            strokeDashoffset: `${circumference - percent * circumference}`,
+          }}
+          strokeWidth={stroke}
+          fill="transparent"
+          r={radius}
+          cx={size/2}
+          cy={size/2}
+
+          className={styles.circle}
+        />
+        <circle
+          style={{
+            stroke: `${stage == 0 ? 'var(--action-main)' : 'var(--info-main)'}`,
+
+            strokeDasharray: `${circumference}`,
+            strokeDashoffset: `${circumference - percent * circumference}`,
+            transition: `opacity 1.8s`,
+            filter: `blur(25px)`,
+            opacity: paused ? '0' : '.75',
           }}
           strokeWidth={stroke}
           fill="transparent"
