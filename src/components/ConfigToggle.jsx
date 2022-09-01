@@ -1,5 +1,6 @@
 import styles from "./ConfigToggle.module.css"
 import React, { useState } from "react";
+import { useEffect } from "react";
 
 export default (props) => {
   const { active, action, prop } = props

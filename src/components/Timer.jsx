@@ -9,6 +9,8 @@ export default (props) => {
   const { time, paused, config, stage } = useSelector((state) => state.pomodoro)
   const dispatch = useDispatch()
 
+  const notificationMessages = ['Now take a rest =￣ω￣=', 'Back to work!! ( •̀ ω •́ )✧']
+
   useEffect(() => {
     if (time > 0 && !paused) {
       const timeout = setTimeout(() => {
@@ -18,6 +20,9 @@ export default (props) => {
     }
 
     if (time === 0) {
+      // Notificação do Browser
+      const notification = new Notification('Time is over!', { body: notificationMessages[stage] })
+
       const timeout = setTimeout(() => {
         let nextStage = stage === 0 ? 1 : 0
         dispatch(switchStage(nextStage))

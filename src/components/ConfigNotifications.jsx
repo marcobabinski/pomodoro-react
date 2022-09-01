@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 
 import Select from 'react-select'
+import AlertPopup from "./AlertPopup";
 import ConfigSlider from "./ConfigSlider";
 import ConfigToggle from "./ConfigToggle";
 
@@ -15,9 +17,25 @@ const audios = [
 
 export default (props) => {
   const { localConfig, updateConfig } = props
+  const [alert, setAlert] = useState(false)
+
+  useEffect(() => {
+    if (localConfig.browserNotification === true) {
+      if (Notification.permission !== "granted") setAlert(true)
+      Notification.requestPermission()
+      .then(() => {
+        if (Notification.permission !== "granted") localConfig.browserNotification = false;
+        else setAlert(false);
+      })
+    }
+  }, [localConfig.browserNotification])
   
   return (
     <div>
+      { (alert)
+      ? <AlertPopup alert="Please allow the browser notifications above!" dismiss={setAlert}/>
+      : '' }
+
       <div className="line-max">
         <p>Notification Sound:</p>
         <div style={{ color: 'black' }}>
@@ -39,7 +57,7 @@ export default (props) => {
       <div className="line">
         <p>Browser Notification:</p>
         <ConfigToggle 
-          active={localConfig.browserNotifications}
+          active={localConfig.browserNotification}
           action={updateConfig}
           prop={"browserNotification"}
         />

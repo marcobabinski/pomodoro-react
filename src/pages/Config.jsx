@@ -92,6 +92,7 @@ export default (props) => {
           onClick={() => {
             dispatch(apllyConfig(localConfig));
             alert("Alterações salvas com sucesso!");
+            localStorage.setItem("localConfig", JSON.stringify(localConfig));
             navigate("/");
           }}
         >
