@@ -21,7 +21,9 @@ export default (props) => {
 
     if (time === 0) {
       // Notificação do Browser
-      const notification = new Notification('Time is over!', { body: notificationMessages[stage] })
+      if (config.browserNotification) {
+        const notification = new Notification('Time is over!', { body: notificationMessages[stage] })
+      }
 
       const timeout = setTimeout(() => {
         let nextStage = stage === 0 ? 1 : 0

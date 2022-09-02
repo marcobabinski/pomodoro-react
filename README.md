@@ -30,12 +30,12 @@ Main colors:
 
 ## To do
 
-➖ Local Storage configuration save  
+✔ Local Storage configuration save  
 ➖ Play alarm on timer finish  
-➖ Broser Notification  
+✔ Broser Notification  
 ✔ Motivational quotes  
 ➖ Periodically change quotes  
 ➖ More quotes
 
 ## Known Issues
-- Debug vars on main page
+None at the moment :D
