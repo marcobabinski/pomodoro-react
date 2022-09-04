@@ -1,0 +1,31 @@
+.audioBtn {
+  border: 0;
+  outline: none;
+  background-color: var(--info-main);
+
+  height: 40px;
+  width: 40px;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: transform .1s;
+}
+
+.audioBtn.playing {
+  background-color: var(--action-main);
+}
+
+.audioBtn:active:not(.disabled) {
+  transform: scale(.9);
+}
+
+.audioBtn:disabled {
+  background: var(--bg-main);
+  color: var(--bg-secondary);
+}
+
+.disabled {
+  cursor: default;
+}

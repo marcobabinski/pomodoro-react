@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import { IoMdPlay, IoMdSquare } from "react-icons/io";
 
 import Select from 'react-select'
+import AudioPlayer from "./AudioPlayer";
 import AlertPopup from "./AlertPopup";
+import Button from "./Button";
 import ConfigSlider from "./ConfigSlider";
 import ConfigToggle from "./ConfigToggle";
 
@@ -45,6 +48,8 @@ export default (props) => {
             onChange={(e) => updateConfig("notificationSound", e.value)}
           />
         </div>
+        <AudioPlayer index={localConfig.notificationSound} volume={localConfig.notificationVolume}></AudioPlayer>
+        
       </div>
       <div className="line mg">
         <p>Notification Volume:</p>

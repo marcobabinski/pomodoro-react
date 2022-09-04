@@ -21,7 +21,7 @@
 .line-max {
   display: grid;
   align-items: center;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: max-content 1fr min-content;
 
   gap: 15px;
 }
