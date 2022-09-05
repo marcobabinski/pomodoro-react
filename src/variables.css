@@ -12,7 +12,9 @@
 
   --action-main: #ff79bc;
   --action-secondary: #cc6096;
+  --action-rgb: 255, 121, 188;
 
   --info-main: #71d1e1;
   --info-secondary: #57a1ae;
+  --info-rgb: 113, 209, 225;
 }

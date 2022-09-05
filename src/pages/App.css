@@ -5,3 +5,47 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.weather {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,.15) 0%, rgba(0,0,0,.02) 28%);
+  mask-image: linear-gradient(black, transparent);
+
+  background: none;
+  /* transition: opacity 10s; */
+  transition: background 8s;
+}
+
+.weather.cold:not(.paused) {
+  background: var(--info-secondary);
+}
+
+.weather.warm:not(.paused) {
+  /* background: linear-gradient(to top, rgba(var(--action-rgb), .15) 0%, rgba(0, 0, 0, 0) 38%); */
+  background: var(--action-main);
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+.spin {
+  animation: spin 12s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

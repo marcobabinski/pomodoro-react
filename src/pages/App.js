@@ -14,7 +14,7 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 
 function App() {
   const dispatch = useDispatch();
-  const { config } = useSelector((state) => state.pomodoro)
+  const { config, stage, paused } = useSelector((state) => state.pomodoro)
 
   console.log('render')
 
@@ -39,7 +39,13 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className={`App`}>
+      <div 
+        className={`weather
+          ${paused ? 'paused' : ''}
+          ${!!stage ? 'cold' : 'warm'}
+        `}>
+      </div>
       <h1
         style={{
           color: 'white',
@@ -49,9 +55,8 @@ function App() {
           gap: '10px'
         }}
       >
-        <AiOutlineClockCircle />
         Pomodoro React
-        <SiReact />
+        <SiReact className='spin' color='var(--info-main)'/>
       </h1>
       <ConfigButton />
       <Quote />
