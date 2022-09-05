@@ -1,4 +1,5 @@
 import styles from './Timer.module.css'
+import sounds from '../assets/audios/index'
 
 import React, { useEffect } from "react";
 import { secondsToTime } from '../utils/utils'
@@ -10,6 +11,8 @@ export default (props) => {
   const dispatch = useDispatch()
 
   const notificationMessages = ['Now take a rest =￣ω￣=', 'Back to work!! ( •̀ ω •́ )✧']
+  const audio = new Audio(sounds[config.notificationSound - 1]);
+  audio.volume = config.notificationVolume / 100;
 
   useEffect(() => {
     if (time > 0 && !paused) {
@@ -24,6 +27,8 @@ export default (props) => {
       if (config.browserNotification) {
         const notification = new Notification('Time is over!', { body: notificationMessages[stage] })
       }
+
+      audio.play()
 
       const timeout = setTimeout(() => {
         let nextStage = stage === 0 ? 1 : 0

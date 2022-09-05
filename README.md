@@ -31,11 +31,12 @@ Main colors:
 ## To do
 
 ✔ Local Storage configuration save  
-➖ Play alarm on timer finish  
+✔ Play alarm on timer finish  
 ✔ Broser Notification  
 ✔ Motivational quotes  
 ➖ Periodically change quotes  
 ➖ More quotes
+➖ Skip function
 
 ## Known Issues
 None at the moment :D
