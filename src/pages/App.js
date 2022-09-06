@@ -4,13 +4,13 @@ import './App.css';
 import ProgressCircle from '../components/ProgressCircle';
 import Buttons from '../components/Buttons';
 import Quote from '../components/Quote';
+import ParticlesContainer from '../components/ParticlesContainer';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { reset, switchStage, togglePause, apllyConfig } from '../features/pomodoro/pomodoroSlice';
+import { reset, switchStage, apllyConfig } from '../features/pomodoro/pomodoroSlice';
 import ConfigButton from '../components/ConfigButton';
 
 import { SiReact } from 'react-icons/si'
-import { AiOutlineClockCircle } from 'react-icons/ai'
 
 function App() {
   const dispatch = useDispatch();
@@ -46,6 +46,7 @@ function App() {
           ${!!stage ? 'cold' : 'warm'}
         `}>
       </div>
+      <ParticlesContainer />
       <h1
         style={{
           color: 'white',

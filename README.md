@@ -35,8 +35,9 @@ Main colors:
 ✔ Broser Notification  
 ✔ Motivational quotes  
 ➖ Periodically change quotes  
-➖ More quotes
-➖ Skip function
+➖ More quotes  
+➖ Skip function  
+➖ Responsiveness
 
 ## Known Issues
 None at the moment :D
