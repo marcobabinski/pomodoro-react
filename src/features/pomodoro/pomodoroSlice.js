@@ -36,12 +36,16 @@ export const pomodoroSlice = createSlice({
     },
     apllyConfig: (state, action) => {
       state.config = action.payload
+    },
+    skipStage: (state) => {
+      state.paused = false;
+      state.time = 0;
     }
   },
 });
 
 export const { countdown, setTime, togglePause, reset, switchStage,
-  apllyConfig,
+  apllyConfig, skipStage
 } = pomodoroSlice.actions;
 
 export default pomodoroSlice.reducer;
