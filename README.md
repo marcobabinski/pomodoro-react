@@ -36,7 +36,7 @@ Main colors:
 ✔ Motivational quotes  
 ➖ Periodically change quotes  
 ➖ More quotes  
-➖ Skip function  
+✔ Skip function  
 ➖ Responsiveness
 
 ## Known Issues
