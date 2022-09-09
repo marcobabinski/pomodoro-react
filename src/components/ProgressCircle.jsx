@@ -13,6 +13,14 @@ export default (props) => {
   const { time, config, stage, paused } = useSelector((state) => state.pomodoro)
 
   const percent = clamp((config.timeParams[stage] - time / 60) / config.timeParams[stage], 0, 1)
+
+  let color = 'var(--action-main)'
+
+  if (stage === 0) {
+    color = paused ? 'var(--action-secondary)' : 'var(--action-main)'
+  } else {
+    color = paused ? 'var(--info-secondary)' : 'var(--info-main)'
+  }
   
   return (
     <div className={styles.progressCircle}>
@@ -34,7 +42,7 @@ export default (props) => {
         />
         <circle
           style={{
-            stroke: `${stage == 0 ? 'var(--action-main)' : 'var(--info-main)'}`,
+            stroke: color,
 
             strokeDasharray: `${circumference}`,
             strokeDashoffset: `${circumference - percent * circumference}`,
@@ -63,7 +71,7 @@ export default (props) => {
           cx={size/2}
           cy={size/2}
 
-          className={styles.circle}
+          className={`${styles.circle} ${paused ? '' : styles.oscilate}`}
         />
       </svg>
       <Timer />

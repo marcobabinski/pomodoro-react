@@ -57,7 +57,10 @@ function App() {
         }}
       >
         Pomodoro React
-        <SiReact className='spin' color='var(--info-main)'/>
+        <SiReact className='spin' 
+          color={stage ? 'var(--info-main)' : 'var(--action-main)'}
+          style={{ transition: '.3s' }}
+        />
       </h1>
       <ConfigButton />
       <Quote />
