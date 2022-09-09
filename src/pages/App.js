@@ -4,17 +4,17 @@ import './App.css';
 import ProgressCircle from '../components/ProgressCircle';
 import Buttons from '../components/Buttons';
 import Quote from '../components/Quote';
+import ParticlesContainer from '../components/ParticlesContainer';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { reset, switchStage, togglePause, apllyConfig } from '../features/pomodoro/pomodoroSlice';
+import { reset, switchStage, apllyConfig } from '../features/pomodoro/pomodoroSlice';
 import ConfigButton from '../components/ConfigButton';
 
 import { SiReact } from 'react-icons/si'
-import { AiOutlineClockCircle } from 'react-icons/ai'
 
 function App() {
   const dispatch = useDispatch();
-  const { config } = useSelector((state) => state.pomodoro)
+  const { config, stage, paused } = useSelector((state) => state.pomodoro)
 
   console.log('render')
 
@@ -39,7 +39,14 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className={`App`}>
+      <div 
+        className={`weather
+          ${paused ? 'paused' : ''}
+          ${!!stage ? 'cold' : 'warm'}
+        `}>
+      </div>
+      <ParticlesContainer />
       <h1
         style={{
           color: 'white',
@@ -49,9 +56,11 @@ function App() {
           gap: '10px'
         }}
       >
-        <AiOutlineClockCircle />
         Pomodoro React
-        <SiReact />
+        <SiReact className='spin' 
+          color={stage ? 'var(--info-main)' : 'var(--action-main)'}
+          style={{ transition: '.3s' }}
+        />
       </h1>
       <ConfigButton />
       <Quote />
